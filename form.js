@@ -21,20 +21,48 @@ form.addEventListener("submit", (event) => {
   const tagInput = tag.value;
   newCard.innerHTML = `
   
-  <ul class="card-list">
+  <ul class="card-list-new">
         <li class="card-list__item">
           <article class="card">
             <h2 class="card__question">
               ${questionInput}
             </h2>
-            <button class="card__button-answer" type="button">
-              Show answer
-            </button>
-            <p class="card__answer">${answerInput}</p>
+        
+            <p">${answerInput}</p>
             <ul class="card__tag-list">
-              <li class="card__tag-list-item">${tagInput}</li>
+              <li class="card__tag-list-item">#${tagInput}</li>
             </ul>
   `;
 
   form.append(newCard);
+});
+
+const charactersLeft = document.querySelector('[data-js="charactersLeft"]');
+
+const maxLength = question.getAttribute("maxlength");
+
+const updateAmountLeft = (value) => {
+  charactersLeft.innerText = value;
+};
+
+updateAmountLeft(maxLength);
+
+question.addEventListener("input", () => {
+  updateAmountLeft(maxLength - question.value.length);
+});
+
+const charactersLeftAnswer = document.querySelector(
+  '[data-js="charactersLeftAnswer"]'
+);
+
+const maxLengthAnswer = answer.getAttribute("maxlength");
+
+const updateAmountLeftAnswer = (value) => {
+  charactersLeftAnswer.innerText = value;
+};
+
+updateAmountLeftAnswer(maxLength);
+
+answer.addEventListener("input", () => {
+  updateAmountLeftAnswer(maxLengthAnswer - answer.value.length);
 });

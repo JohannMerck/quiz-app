@@ -11,20 +11,26 @@
     <script src="./form.js" defer></script>
   </head>
   <header class="header">
-    <h1 class="header__title">Quiz-App</h1>
+    <h1 class="header__title">Write your own Question!</h1>
       </header>
   <body class="body-neu" data-js="body-neu">
 
     <main class="main-neu" data-js="main-form">
 
      <form class="form-css" data-js="form-yolo">
-        <label for="your-question" class="form-headers">Your Question:</label>
-        <textarea id="your-question" input name="yourQuestion" data-js="question"></textarea>
+        <h2 for="your-question" class="form-headers">Your Question:</h2>
+        <textarea id="your-question" input name="yourQuestion" data-js="question" maxlength="150"></textarea>
+        <small class="form__character-count"
+        >(<span data-js="charactersLeft"></span> characters left )</small
+      >
 <p class="space"> Space </p>
-        <label for="your-answer" class="form-headers">Your Answer:</label>
-        <textarea id="your-answer" input name="yourAnswer" data-js="answer"></textarea>
+        <h2 for="your-answer" class="form-headers">Your Answer:</h2>
+        <textarea id="your-answer" input name="yourAnswer" data-js="answer" maxlength="150"></textarea>
+        <small class="form__character-count"
+        >(<span data-js="charactersLeftAnswer"></span> characters left )</small
+      >
         <p class="space"> Space </p>
-        <label for="your-tag" class="form-headers">Tag:</label> <input type="text" id="your-tag" name="yourTag" data-js="tag"/>
+        <h2 for="your-tag" class="form-headers">Tag:</h2> <input type="text" id="your-tag" name="yourTag" data-js="tag"/>
         <button type="submit" class="submit-button" data-js="submit-button">Submit</button>
      </form>   
      
