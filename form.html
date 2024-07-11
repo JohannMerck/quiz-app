@@ -8,6 +8,7 @@
     <title>Quiz-App</title>
     <link rel="stylesheet" href="./styles.css" />
     <script src="./index.js" defer></script>
+    <script src="./form.js" defer></script>
   </head>
   <header class="header">
     <h1 class="header__title">Quiz-App</h1>
@@ -16,15 +17,16 @@
 
     <main class="main-neu">
 
-     <form class="form">
-        <h2>Your Question</h2>
+     <form class="form-css" data-js="form-yolo">
+        <label for="your-question" class="form-headers">Your Question:</label>
         <textarea id="your-question"></textarea>
-        <h2>Your Answer</h2>
-        <textarea id="your-question"></textarea>
-       
-        <h2>Tag:</h2> <input type="text" id="your-answer" />
+<p class="space"> Space </p>
+        <label for="your-answer" class="form-headers">Your Answer:</label>
+        <textarea id="your-answer"></textarea>
+        <p class="space"> Space </p>
+        <label for="your-tag" class="form-headers">Tag:</label> <input type="text" id="your-tag" />
+        <button type="submit" class="submit-button">Submit</button>
      </form>   
-
 <nav class="navigation">
     <ul class="navigation__list">
       <li class="navigation__list-item">

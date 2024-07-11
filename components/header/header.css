@@ -12,10 +12,3 @@
 .header__title {
   text-align: center;
 }
-
-.form {
-  position: fixed;
-  top: 150px;
-  text-align: center;
-  left: 275px;
-}

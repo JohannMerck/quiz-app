@@ -1,0 +1,50 @@
+.form-css {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  top: 150px;
+  position: relative;
+}
+
+.submit-button {
+  position: absolute;
+  top: 590px;
+}
+
+.header {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 0;
+  background: var(--primary);
+  border-bottom: 1px solid var(--black);
+}
+
+.header__title {
+  text-align: center;
+}
+
+#your-question {
+  width: 350px;
+  height: 200px;
+}
+
+#your-answer {
+  width: 350px;
+  height: 200px;
+}
+
+#your-tag {
+  width: 350px;
+}
+
+.space {
+  visibility: hidden;
+}
+
+.form-headers {
+  font-size: large;
+}
